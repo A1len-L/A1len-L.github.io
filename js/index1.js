@@ -302,6 +302,35 @@ $(function(){
 			$("#floor1 .floortop .floorcontent .floorbox .flooritem")
 			.eq(index).show().siblings().hide();
 		})
+		//楼区底部轮播
+		var floorbottom={
+			imgbox:$("#floor1 .floorbottom .floorbottomimgbox"),
+			btnl:$("#floor1 .floorbottom .gol"),
+			btnr:$("#floor1 .floorbottom .gor"),
+			index:0,
+			init:function(){
+				var that=this;
+				this.btnr.click(function(){
+					if(that.index>3){
+						return;
+					}
+					that.index++;
+					that.imgbox.stop(true).animate({
+						marginLeft:-121*that.index
+					})
+				})
+				this.btnl.click(function(){
+					if(that.index<=0){
+						return;
+					}
+					that.index--;
+					that.imgbox.stop(true).animate({
+						marginLeft:-121*that.index
+					})
+				})
+			}
+		}
+		floorbottom.init();
 	});
 	
 })
