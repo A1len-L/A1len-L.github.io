@@ -91,8 +91,11 @@ $(function(){
 		},
 		//操作图片和小圆圈
 		change:function(){
-			this.imgs.eq(this.next).fadeIn(1000);
+			if(this.now==this.next){
+				return;
+			}
 			this.imgs.eq(this.now).fadeOut(1000);
+			this.imgs.eq(this.next).fadeIn(1000);
 			this.circlrs.eq(this.now).removeClass("bg");
 			this.circlrs.eq(this.next).addClass("bg");
 			this.now=this.next;
