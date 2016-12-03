@@ -61,11 +61,11 @@ $(function(){
 		hover:function(){
 			var that=this;
 			this.small.hover(function(){
-				that.filter.show();
-				that.big.fadeIn(600);
+				that.filter.stop(true).show();
+				that.big.stop(true).show(500);
 			},function(){
-				that.filter.hide();
-				that.big.hide();
+				that.filter.stop(true).hide();
+				that.big.stop(true).hide(500);
 			})
 		}
 	}
@@ -181,7 +181,100 @@ $(function(){
 			})
 		}
 	}
-	cart.init()
+	cart.init();
+	/*推荐区*/
+	var recommend={
+		lis:$("#recommend .content ul li"),
+		ul:$("#recommend .content ul"),
+		btnl:$("#recommend .content a.arrowl"),
+		btnr:$("#recommend .content a.arrowr"),
+		init:function(){
+			this.hover();
+			this.click();
+		},
+		/*li hover*/
+		hover:function(){
+			var that=this;
+			this.lis.hover(function(){
+				$(this).stop(true).animate({
+					top:-5
+				},300).find(".des").stop(true).animate({
+					bottom:0
+				},300)
+			},function(){
+				$(this).stop(true).animate({
+					top:0
+				},300).find(".des").stop(true).animate({
+					bottom:-25
+				},300)
+			})
+		},
+		//点击左右按钮
+		click:function(){
+			var that=this;
+			var index=0;
+			//点击下一张
+			this.btnr.click(function(){
+				if(index>1){
+					return;
+				}
+				index++;
+				that.ul.stop(true).animate({
+					marginLeft:-190*index
+				})
+			})
+			//点击上一张
+			this.btnl.click(function(){
+				if(index<=0){
+					return;
+				}
+				index--;
+				that.ul.stop(true).animate({
+					marginLeft:-190*index
+				})
+			})
+		}
+	}
+	recommend.init();
+	
+	/*推荐区下部*/
+	
+	//点击title 的li
+	$("#about .iphone .title li").click(function(){
+		$(this).addClass("click").siblings().removeClass("click");
+		var liIndex=$(this).index();
+		var itemT=$("#about .iphone .content .contentitem").eq(liIndex)
+		.offset().top;
+		$(window).scrollTop(itemT-36);
+	})
+	//滚轮事件
+	var iphonetitle=$("#about .iphone .title")
+	var titleT=iphonetitle.offset().top;
+	var contentitems=$("#about .iphone .content .contentitem")
+	$(window).scroll(function(){
+		if( $(window).scrollTop()>=titleT ){
+			iphonetitle.css({
+				position:"fixed",
+				top:0
+			})
+		}else{
+			iphonetitle.css({
+				position:"static",
+				top:"auto"
+			})
+		}
+		contentitems.each(function(k,v){
+			var itemT=$(v).offset().top;
+			var itemB=$(v).offset().top+$(v).outerHeight();
+			if( $(window).scrollTop()+37 > itemT && $(window).scrollTop()+37 <=itemB){
+				$("#about .iphone .title li").eq(k).addClass("click")
+				.siblings().removeClass("click");
+				return false;
+			}
+		})
+	})
+	/*引入底部文件*/
+	$("#addbottom").load("bottom.html");
 })
 
 
