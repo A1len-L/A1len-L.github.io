@@ -1,0 +1,279 @@
+@charset "utf-8";
+.margin{
+	width:993px;
+	margin:0 auto;
+}
+/*top区开始*/
+#top{
+	width:100%;
+	height:32px;
+	border-bottom: 1px solid #e5e5e5;
+	background: #f2f2f2;
+}
+#top .top-l .where{
+	display: inline-block;
+	vertical-align: middle;
+	position:relative;
+}
+#top .top-l .where:hover .local-list{
+	display:block;
+}
+#top .top-l .where .local-list{
+	width:200px;
+	height:330px;
+	border:1px solid #ccc;
+	position:absolute;
+	top:22px;
+	background: #fff;
+	padding:0 10px 0;
+	color:#000;
+	z-index: 100;
+	display:none;
+}
+#top .top-l .where .local-list .title{
+	line-height: 40px;
+	border-bottom: 1px solid #e5e5e5;
+}
+#top .top-l .where .local-list .title b{
+	font-weight: 700;
+}
+#top .top-l .where .local-list ul li{
+	height:32px;
+}
+#top .top-l .where .local-list ul li span.letter{
+	width:20px;
+	height:20px;
+	background: #ccc;
+	text-align: center;
+	border-radius: 50%;
+	color:#fff;
+	line-height: 20px;
+	margin-right: 6px;
+}
+#top .top-l .where .local-list ul li span.city{
+	line-height: 32px;
+	padding:0 3px 0;
+}
+#top .top-l .where .local-list ul li span.city:hover{
+	background:#ff3300;
+	color:#fff;
+	cursor:pointer;
+}
+#top .top-l span,#top .top-l a{
+	display: inline-block;
+}
+#top .top-l span.local{
+	width:38px;
+	height:22px;
+	background: #ff3300;
+	color:#fff;
+	text-align: center;
+	font:12px/22px "";
+	cursor: pointer;
+}
+#top .top-l a.change-local{
+	margin-right: 50px;
+}
+#top .top-l a,span.welcome{
+	height:32px;
+	font:12px/32px "";
+	color:#999;
+	vertical-align: middle;
+}
+#top .top-l a:hover{
+	color:red;
+	text-decoration: underline;
+}
+#top .top-l span.welcome{
+	margin-right: 8px;
+}
+#top .top-l a.login{
+	margin-right: 8px;
+}
+
+#top .top-r .message{
+	display: inline-block;
+	width:70px;
+	height:32px;
+	text-align: center;
+	position:relative;
+	
+}
+#top .top-r .message:hover{
+	background: #fff;
+	height:33px;
+	width:68px;
+	border-left:1px solid #ccc;
+	border-right:1px solid #ccc;
+}
+#top .top-r .message:hover .my-message{
+	display:block;
+}
+#top .top-r .message:hover .my{
+	color:red;
+	text-decoration: underline;
+	cursor:pointer;
+}
+#top .top-r .message .my{
+	line-height: 32px;
+}
+#top .top-r .message .my-message{
+	width:94px;
+	background: #fff;
+	border:1px solid #ccc;
+	border-top:0px;
+	position:absolute;
+	left:-1px;
+	top:33px;
+	display:none;
+}
+#top .top-r .message .my-message p:hover{
+	color:red;
+	text-decoration: underline;
+	cursor:pointer;
+}
+#top .top-r .dianpu{
+	line-height: 32px;
+	color:red;
+	cursor:pointer;
+	margin-right:5px;
+}
+#top .top-r .dianpu:hover{
+	text-decoration: underline;
+}
+#top .top-r .phone{
+	display: inline-block;
+	width:45px;
+	height:32px;
+	text-align: center;
+	position:relative;	
+	cursor: pointer;
+}
+#top .top-r .phone:hover{
+	width:43px;
+	background: #fff;
+	height:33px;
+	border-left:1px solid #ccc;
+	border-right:1px solid #ccc;
+	color:red;
+	text-decoration: underline;
+}
+#top .top-r .phone:hover .app{
+	display:block;
+}
+#top .top-r .phone .mobile{
+	line-height: 32px;
+}
+#top .top-r .phone .app{
+	position:absolute;
+	top:33px;
+	padding:5px;
+	background: #fff;
+	border:1px solid #ccc;
+	border-top:0px;
+	left:-1px;
+	display:none;
+}
+#top .top-r .phone .app img{
+	display:block;
+	width:140px;
+}
+#top .top-r .nav{
+	display: inline-block;
+	width:70px;
+	height:32px;
+	text-align: center;
+	position:relative;	
+	cursor: pointer;
+}
+#top .top-r .nav:hover{
+	background: #fff;
+	height:33px;
+	width:68px;
+	border-left:1px solid #ccc;
+	border-right:1px solid #ccc;
+}
+#top .top-r .nav:hover .nav-content{
+	display:block;
+}
+#top .top-r .nav:hover .nav-title{
+	color:red;
+	text-decoration: underline;	
+}
+#top .top-r .nav .nav-title{
+	line-height: 32px;
+}
+#top .top-r .nav .nav-content{
+	width:993px;
+	padding-bottom:10px;
+	padding-top:18px;
+	border:1px solid #ccc;
+	border-top:0px solid #ccc;
+	position:absolute;
+	right:-1px;
+	top:33px;
+	background: #fff;
+	display:none;
+}
+#top .top-r .nav .nav-content .product{
+	width:323px;
+	padding-left: 29px;
+	text-align: left;
+}
+#top .top-r .nav .nav-content .product .product-title{
+	line-height: 38px;
+	font-size: 15px;
+	color:#f6762b;
+	font-weight: 700;
+}
+#top .top-r .nav .nav-content .product .product-content li{
+	float:left;
+	line-height: 30px;
+	margin-right: 32px;
+}
+#top .top-r .nav .nav-content .product .product-content li:hover{
+	color:#f6762b;
+	text-decoration: underline;
+}
+#top .top-r .nav .nav-content .market{
+	width:323px;
+	padding-left: 29px;
+	text-align: left;
+	border-left:1px solid #ccc;
+	border-right:1px solid #ccc;
+}
+#top .top-r .nav .nav-content .market .market-title{
+	line-height: 38px;
+	font-size: 15px;
+	color:#4252aa;
+	font-weight: 700;
+}
+#top .top-r .nav .nav-content .market .market-content li{
+	float:left;
+	line-height: 30px;
+	margin-right: 56px;
+}
+#top .top-r .nav .nav-content .market .market-content li:hover{
+	color:#4252aa;
+	text-decoration: underline;
+}
+#top .top-r .nav .nav-content .about{
+	width:250px;
+	padding-left: 29px;
+	text-align: left;
+}
+#top .top-r .nav .nav-content .about .about-title{
+	line-height: 38px;
+	font-size: 15px;
+	color:#000;
+	font-weight: 700;
+}
+#top .top-r .nav .nav-content .about .about-content li{
+	float:left;
+	line-height: 30px;
+	margin-right: 33px;
+}
+#top .top-r .nav .nav-content .about .about-content li:hover{
+	color:#000;
+	text-decoration: underline;
+}

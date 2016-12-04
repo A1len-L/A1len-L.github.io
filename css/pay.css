@@ -1,0 +1,213 @@
+@charset "utf-8";
+#addtop{
+	height:33px;
+}
+#head{
+	padding:24px 0 16px 0;
+}
+#head .logo{
+	width:293px;
+	height:100px;
+}
+#head .process li{
+	width:140px;
+	text-align: center;
+	float:left;
+	font-weight: 700;
+}
+#head .process li .bg{
+	height:35px;
+	background: url(../img/bg-pay.png) no-repeat -297px -101px;
+	line-height: 35px;
+	color:#fff;
+	font-size: 16px;
+}
+#head .process li:nth-child(1) .bg{
+	background-position:-297px -203px ;
+}
+#head .process li:nth-child(5) .bg{
+	background-position:-297px -135px ;
+}
+#main{
+	min-height: 519px;
+	background: #f9f9f9;
+	padding-top:15px;
+	
+}
+#main .margin{
+	border:1px solid #ddd;
+}
+#main li{
+	float:left;
+	text-align: center;
+}
+#main li.check{
+	width:96px;
+}
+#main li.product{
+	width:312px;
+	margin-right: 62px;
+}
+#main li.amount{
+	width:86px;
+	margin-right: 80px;
+}
+#main li.price{
+	width:66px;
+	margin-right: 77px;
+}
+#main li.total{
+	width:70px;
+	margin-right: 70px;
+}
+#main li.handle{
+	width:36px;
+}
+#main li input[type="checkbox"]{
+	vertical-align: middle;
+	margin-right: 5px;
+}
+#main .title{
+	height:35px;
+	font:12px/35px "";
+	background: #f1f1f1;
+	border-bottom: 2px solid #d9d9d9;
+}
+#main .title label{
+	cursor:pointer;
+}
+#main .content{
+	background: #fff;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #ddd;
+}
+#main .content ul{
+	border-bottom:1px dashed #ccc;
+}
+#main .content .check{
+	height:59px;
+	padding-top: 44px;
+}
+#main .content .product{
+	text-align: left;
+	height:84px;
+	padding-top: 19px;
+}
+#main .content .product img{
+	width:60px;
+	height:60px;
+}
+#main .content .amount{
+	padding-top: 40px;
+}
+#main .content .amount .changeamount{
+	width:72px;
+	height:20px;
+	border:1px solid #bbb;
+	display: inline-block;
+}
+#main .content .amount .changeamount a{
+	width:20px;
+	height:20px;
+	font:12px/20px "";
+}
+#main .content .amount .changeamount input{
+	width:30px;
+	height:20px;
+	border:0;
+	border-right: 1px solid #bbb;
+	border-left: 1px solid #bbb;
+	text-align: center;
+}
+#main .content li:nth-child(4){
+	font:700 16px/103px "";
+	color:#e31939;
+}
+#main .content li:nth-child(5){
+	font:700 16px/103px "";
+	color:#e31939;
+}
+#main .content li:nth-child(6){
+	font:700 16px/103px "";
+	cursor: pointer;
+}
+#main .content li:nth-child(6):hover{
+	color:red;
+	text-decoration: underline;
+}
+#main .bottom{
+	padding:11px 26px;
+	background: #fff;
+}
+#main .bottom .continue{
+	width:140px;
+	text-align: center;
+	font:14px/40px "";
+	color:#666;
+	background: #fafafa;
+	border:1px solid #ccc;
+}
+#main .bottom .paymoneny{
+	width:150px;
+	text-align: center;
+	font:14px/40px "";
+	color:#fff;
+	background: #ccc;
+	cursor: not-allowed;
+}
+#main .bottom .paymoneny.buy{
+	cursor: pointer;
+	background: #e31939;
+}
+#main .bottom .delete{
+	font:12px/40px "";
+	cursor:pointer;
+	margin-left: 16px;
+}
+#main .bottom .allprice{
+	width:300px;
+	font:12px/40px "";
+	text-align: center;
+}
+#main .bottom .allprice .paynum{
+	font-size: 15px;
+	font-weight: 700;
+	color:#e31939;
+	margin-left: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#bottom .bb{
+	height:80px;
+	text-align: center;
+	padding-top: 10px;
+	line-height: 26px;
+	background: #fafafa;
+	border-top: 1px solid #ccc;
+}
