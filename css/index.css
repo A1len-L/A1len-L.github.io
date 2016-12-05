@@ -1064,6 +1064,186 @@
 #floor1 .floorbottom a.gor{
 	right:0;
 }
+/*商超区*/
+#supermarket{
+	width:100%;
+	height:520px;
+}
+#supermarket .title{
+	height:29px;
+	font:600 20px/29px "";
+	color:#000;
+	padding:0 0 9px 70px;
+	border-bottom: 2px solid #000;
+	background: url(../img/shenbian_title.jpg) no-repeat left 0;
+	margin-bottom:15px;
+}
+#supermarket .content li{
+	float:left;
+	margin:0 14px 20px 0;
+	cursor:pointer;
+}
+#supermarket .content li .imgbox{
+	border:3px solid #ececec;
+	position:relative;
+}
+#supermarket .content li .imgbox .already{
+	position:absolute;
+	top:0;
+	left:0;
+}
+#supermarket .content li .imgbox .line-top{
+	position:absolute;
+	height:3px;
+	width:0;
+	left:-3px;
+	top:-3px;
+	background: #000;
+	opacity: 0;
+	transition: all 0.3s;
+}
+#supermarket .content li:hover .line-top{
+	width:228px;
+	opacity:1;
+	
+}
+#supermarket .content li .imgbox .line-bottom{
+	position:absolute;
+	height:3px;
+	width:0;
+	right:-3px;
+	bottom:-3px;
+	background: #000;
+	opacity: 0;
+	transition: all 0.3s;
+}
+#supermarket .content li:hover .line-bottom{
+	width:228px;
+	opacity:1;
+	
+}
+#supermarket .content li .imgbox .line-left{
+	position:absolute;
+	height:0px;
+	width:3px;
+	left:-3px;
+	top:-3px;
+	background: #000;
+	opacity: 0;
+	transition: all 0.3s;
+}
+#supermarket .content li:hover .line-left{
+	height:162px;
+	opacity:1;
+	
+}
+#supermarket .content li .imgbox .line-right{
+	position:absolute;
+	height:0px;
+	width:3px;
+	right:-3px;
+	bottom:-3px;
+	background: #000;
+	opacity: 0;
+	transition: all 0.3s;
+}
+#supermarket .content li:hover .line-right{
+	height:162px;
+	opacity:1;
+	
+}
+#supermarket .content li p{
+	width:228px;
+	text-align: center;
+	font:600 18px/40px "";
+	background: #d6595e;
+	color:#fff;
+}
+#store{
+	width:100%;
+	height:400px;
+}
+#store .title{
+	height:29px;
+	font:600 20px/29px "";
+	color:#000;
+	padding:0 0 9px 70px;
+	border-bottom: 2px solid #000;
+	background: url(../img/shenbian_title.jpg) no-repeat left 0;
+	margin-bottom:15px;
+}
+#store .content li{
+	border:1px solid #ececec;
+	float:left;
+	margin:0 20px 20px 0;
+	cursor:pointer;
+	width:150px;
+	height:150px;
+	overflow: hidden;
+	position: relative;
+}
+#store .content li img{
+	width:150px;
+	height:150px;
+	position:absolute;
+	left:0;
+	top:0;
+}
+/*服务区*/
+#service{
+	width:100%;
+	height:33px;
+	padding:20px 0 20px 0;
+	background: #fafafa;
+}
+#service ul{
+	background: url(../img/footer-icon.png) no-repeat;
+}
+#service ul li{
+	float:left;
+	width:190px;
+	padding-left: 59px;
+	font:16px/35px "微软雅黑";
+}
+#service ul li:last-child{
+	width:140px;
+}
+/*botom*/
+#addbottom{
+	height:324px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

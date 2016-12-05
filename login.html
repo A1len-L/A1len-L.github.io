@@ -2,10 +2,10 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>登录页面</title>
+		<title>注册页面</title>
 		<link rel="shortcut icon" href="img/title-icon.gif" />
 		<link rel="stylesheet" type="text/css" href="css/public.css"/>
-		<link rel="stylesheet" type="text/css" href="css/register.css"/>
+		<link rel="stylesheet" type="text/css" href="css/login.css"/>
 	</head>
 	<body>
 		<div id="head">
@@ -14,7 +14,7 @@
 					<img src="img/logo1.jpg"/>
 				</a>
 				<span>|</span>
-				<b>欢迎登陆</b>
+				<b>欢迎注册</b>
 				<div class="signbox r">
 					<a href="#"></a>
 					<a href="#"></a>
@@ -26,31 +26,51 @@
 			<div class="margin">
 				<div class="wrap clear">
 					<div class="imgbox"></div>
-					<div class="registerbox">
-						<div class="title">
-							<span>还没有帐号?</span>
-							<a href="login.html">立即注册</a>
+					<div class="loginbox">
+						<div class="title clear">
+							<ul class="clear">
+								<li class="click">手机注册</li>
+								<li>邮箱注册</li>
+							</ul>
+							<div class="have r">
+								已有账号!
+								<a href="register.html">登录</a>
+							</div>
 						</div>
 						<div class="content">
 							<div class="item">
-								<label>账户名</label><br/>
-								<input type="text" placeholder="用户名 /手机号/邮箱"/>
+								<div class="top clear">
+									<i class="icon l"></i>
+									<input type="text" class="l phone" placeholder="手机"/>
+								</div>
+								<div class="error"></div>
 							</div>
 							<div class="item">
-								<label>密码</label><br/>
-								<input type="password"/>
+								<div class="top clear">
+									<i class="icon l"></i>
+									<input type="text" class="l psw" placeholder="密码"/>
+								</div>
+								<div class="error">
+									- 登录密码不能少于 6 个字符。 
+								</div>
+								<div class="strong clear">
+									<span class="l">弱</span>
+									<span class="l">中</span>
+									<span class="l">强</span>
+								</div>
 							</div>
-							<div class="check">
-								<input type="checkbox"/>
-								<span>请保存我这次的登录信息。</span>
+							<div class="item">
+								<div class="top clear">
+									<i class="icon l"></i>
+									<input type="text" class="l sure" placeholder="确认密码"/>
+								</div>
+								<div class="error"></div>
 							</div>
-							<a href="javascript:;">立即登录</a>
-							<ul class="clear">
-								<li><i></i>微信</li>
-								<li><i></i>QQ</li>
-								<li><i></i>新浪</li>
-								<li><i></i>支付宝</li>
-							</ul>
+							<div class="agreement">
+								<input type="checkbox" checked="checked"/>
+								我已看过并接受《<span>用户协议</span>》
+							</div>
+							<a href="javascript:;" class="login">立即注册</a>
 						</div>
 					</div>
 				</div>
@@ -83,6 +103,6 @@
 			</div>
 		</div>
 		<script src="js/jquery.1.11.3.min.js"></script>
-		<script src="js/register.js"></script>
+		<script src="js/login.js"></script>
 	</body>
 </html>

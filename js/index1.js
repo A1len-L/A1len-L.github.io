@@ -297,45 +297,71 @@ $(function(){
 	}
 	sale.init();
 	//加载楼区
-	$("#floor1").load("floors.html",function(){
-		//楼区选项卡
-		$("#floor1 .floortop .floortitle ul li").mouseenter(function(){
-			var index=$(this).index();
-			$(this).addClass("active").siblings().removeClass("active");
-			$("#floor1 .floortop .floorcontent .floorbox .flooritem")
-			.eq(index).show().siblings().hide();
-		})
-		//楼区底部轮播
-		var floorbottom={
-			imgbox:$("#floor1 .floorbottom .floorbottomimgbox"),
-			btnl:$("#floor1 .floorbottom .gol"),
-			btnr:$("#floor1 .floorbottom .gor"),
-			index:0,
-			init:function(){
-				var that=this;
-				this.btnr.click(function(){
-					if(that.index>3){
-						return;
-					}
-					that.index++;
-					that.imgbox.stop(true).animate({
-						marginLeft:-121*that.index
-					})
-				})
-				this.btnl.click(function(){
-					if(that.index<=0){
-						return;
-					}
-					that.index--;
-					that.imgbox.stop(true).animate({
-						marginLeft:-121*that.index
-					})
-				})
-			}
-		}
-		floorbottom.init();
+	$("#addfloor1").load("floor1.html",function(){
+		$.getScript("js/floor.js");
+	});
+	$("#addfloor2").load("floor1.html",function(){
+		$.getScript("js/floor.js");
+		$("#addfloor2 #floor1 .floortop .floortitle h3").html("2F 服装服饰 ");
+		$("#addfloor2 #floor1 .floortop .floorcontent .floormenu .floormenulist ").
+		css("background-color","#c33");
+	});
+	$("#addfloor3").load("floor1.html",function(){
+		$.getScript("js/floor.js");
+		$("#addfloor3 #floor1 .floortop .floortitle h3").html("3F 个护化妆  ");
+		$("#addfloor3 #floor1 .floortop .floorcontent .floormenu .floormenulist ").
+		css("background-color","#f99");
+	});
+	$("#addfloor4").load("floor1.html",function(){
+		$.getScript("js/floor.js");
+		$("#addfloor4 #floor1 .floortop .floortitle h3").html("4F 手机数码  ");
+		$("#addfloor4 #floor1 .floortop .floorcontent .floormenu .floormenulist ").
+		css("background-color","#9f9");
+	});
+	$("#addfloor5").load("floor1.html",function(){
+		$.getScript("js/floor.js");
+		$("#addfloor5 #floor1 .floortop .floortitle h3").html("5F 家用电器 ");
+		$("#addfloor5 #floor1 .floortop .floorcontent .floormenu .floormenulist ").
+		css("background-color","#99f");
+	});
+	$("#addfloor6").load("floor1.html",function(){
+		$.getScript("js/floor.js");
+		$("#addfloor6 #floor1 .floortop .floortitle h3").html("6F 家居日用 ");
+		$("#addfloor6 #floor1 .floortop .floorcontent .floormenu .floormenulist ").
+		css("background-color","#f9f");
+	});
+	$("#addfloor7").load("floor1.html",function(){
+		$.getScript("js/floor.js");
+		$("#addfloor7 #floor1 .floortop .floortitle h3").html("7F 酒类饮料");
+		$("#addfloor7 #floor1 .floortop .floorcontent .floormenu .floormenulist ").
+		css("background-color","#c97bff");
+	});
+	$("#addfloor8").load("floor1.html",function(){
+		$.getScript("js/floor.js");
+		$("#addfloor8 #floor1 .floortop .floortitle h3").html("8F 母婴用品");
+		$("#addfloor8 #floor1 .floortop .floorcontent .floormenu .floormenulist ").
+		css("background-color","#ffbb00");
 	});
 	
+	/*沿街店铺区*/
+	$("#store .content li").mouseenter(function(){
+		$(this).find("img").stop(true).animate({
+			width:180,
+			left:-15,
+			height:180,			
+			top:-15
+		},300)
+	});
+	$("#store .content li").mouseleave(function(){
+		$(this).find("img").stop(true).animate({
+			width:150,
+			left:0,
+			height:150,			
+			top:0
+		},300)
+	});
+	/*引入bottom*/
+	$("#addbottom").load("bottom.html");
 })
 
 
