@@ -362,6 +362,111 @@ $(function(){
 	});
 	/*引入bottom*/
 	$("#addbottom").load("bottom.html");
+	
+	/*楼层按钮设置*/
+	var floorT=$("#addfloor1").offset().top;
+	var floorUl=$("#floor");
+	var li=floorUl.children("li");
+	var liN=li.children(".num");
+	var liNa=liN.children("a");
+	var liD=li.children(".des");
+	var floorItem=$(".floorarea");
+	var screenH=$(window).height();
+	var flag=false; //false <    true >= 
+	var index=null;
+	/*滚轮事件*/
+	$(window).scroll(function(){
+		var windowT=$(this).scrollTop();		
+		//楼层按钮跟随
+		floorItem.each(function(k,v){
+				var floorH=$(v).offset().top;
+				var floorB=floorH+$(v).height();
+				if( (windowT+screenH/2)>floorH && (windowT+screenH/2)<floorB ){
+					index=k;
+					li.eq(k).find(".num").hide();
+					li.eq(k).siblings().find(".num").show();
+					return false;
+				}
+		});
+		//楼层ul显示与隐藏
+		if( windowT>(floorT-30) ){
+			if(flag){
+				return;
+			}
+			flag = true;
+			floorUl.stop(true).show().animate({
+				marginTop:-140,
+				opacity:1
+			});
+			li.stop(true).animate({
+				width:40,
+				height:35
+			});
+			liN.stop(true).animate({
+				width:20
+			});
+			liNa.stop(true).animate({
+				"line-height":35,
+			})
+			liD.stop(true).animate({
+				"line-height":35
+			});
+		}else{
+			if(!flag){
+				return;
+			}
+			flag = false;
+			floorUl.stop(true).animate({
+				marginTop:-200,
+				opacity:0
+			},function(){
+				$(this).stop(true).hide();
+			});
+			li.stop(true).animate({
+				width:50,
+				height:50
+			});
+			liN.stop(true).animate({
+				width:30
+			});
+			liNa.stop(true).animate({
+				"line-height":50,
+			})
+			liD.stop(true).animate({
+				"line-height":50
+			});
+		};
+		
+	})
+	//操作楼层按钮
+	//hover
+	li.hover(function(){
+		$(this).find(".num").hide();
+	},function(){
+		if($(this).index()==index){
+			return;
+		}
+		$(this).find(".num").show();
+	});
+	//点击
+	li.click(function(){
+		flags=false;
+		var floorItemH=floorItem.eq( $(this).index() ).offset().top;
+		$("html,body").stop(true).animate({
+			scrollTop:floorItemH
+		})
+	})
+	
+	/*右侧条*/
+	$("#right .hover").hover(function(){
+		$(this).find(".up").stop(true).animate({
+			marginTop:-40
+		},200)
+	},function(){
+		$(this).find(".up").stop(true).animate({
+			marginTop:0
+		},200)
+	})
 })
 
 

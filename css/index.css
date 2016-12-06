@@ -1212,35 +1212,230 @@
 #addbottom{
 	height:324px;
 }
+/*楼层按钮*/
+#floor{
+	position:fixed;
+	top:50%;
+	margin-top:-200px;
+	left:45px;
+	opacity:0;
+	display:none;
+}
+#floor li{
+	width:50px;
+	height:50px;
+	cursor:pointer;
+	overflow: hidden;
+}
+#floor li a{
+	display: block;
+}
+#floor li .num{
+	width:30px;
+	height:100%;
+	text-align: center;
+	color:#000;
+	padding:0 10px 0 10px;
+}
+#floor li .num a{
+	width:100%;
+	font:12px/50px "";
+}
+#floor li .des{
+	width:100%;
+	font:12px/50px "";
+	color:#fff;
+	background: #e31939;
+	text-align: center;
+	-display:none;
+}
+/*右边测条*/
+#right{
+	height:100%;
+	width:35px;
+	position: fixed;
+	background: #333;
+	z-index: 999;
+	top:0;
+	right: 0;
+}
+#right .user{
+	width:35px;
+	height:35px;	
+	position:absolute;
+	top:120px;
+}
+#right .user:hover .loginbox{
+	display:block;
+}
+#right .imgbox{
+	cursor:pointer;
+}
+#right .loginbox{
+	height:220px;
+	width:210px;
+	padding-top:20px;
+	padding-left: 25px;
+	padding-right: 25px;
+	border:1px solid #e4e4e4;
+	background: #fff;
+	position: absolute;
+	z-index: 999;
+	left:-272px; 
+	top:-12px;
+	display:none;
+}
+#right .loginbox .arrow1{
+	width:0;
+	height:0;
+	border-top:10px solid transparent;
+	border-right:10px solid transparent;
+	border-bottom:10px solid transparent;
+	border-left:10px solid #e4e4e4;
+	position:absolute;
+	left:261px;
+	top:20px;
+}
+#right .loginbox .arrow2{
+	width:0;
+	height:0;
+	border-top:10px solid transparent;
+	border-right:10px solid transparent;
+	border-bottom:10px solid transparent;
+	border-left:10px solid #fff;
+	position:absolute;
+	left:-11px;
+	top:-10px;
+}
+#right .loginbox .title{
+	height:31px;
+	margin-bottom: 18px;
+}
+#right .loginbox .title h3{
+	float:left;
+	font:15px/29px "";
+	border-bottom: 2px solid #e31939;
+	color:#e31939;
+	margin-right: 32px;
+}
+#right .loginbox .title span{
+	font:12px/28px "";
+	color:#666;
+	display: inline-block;
+	vertical-align: middle;
+}
+#right .loginbox .title a{
+	display: inline-block;
+	width:58px;
+	text-align: center;
+	vertical-align: middle;
+	font:12px/20px "";
+	color:#fff;
+	background: #e31939;
+}
+#right .loginbox .content .item{
+	margin-bottom: 13px;
+}
+#right .loginbox .content .item span{
+	float:left;
+	width:52px;
+	text-align: center;
+	line-height: 27px;
+	color:#666;
+}
+#right .loginbox .content .item input{
+	float:left;
+	width:150px;
+	padding-left: 5px;
+	height: 25px;
+	border:1px solid #ddd;
+}
+#right .loginbox .content .check{
+	height:29px;
+}
+#right .loginbox .content .check input{
+	vertical-align: middle;
+}
+#right .loginbox .content .check label{
+	vertical-align: middle;
+	display:inline-block;
+	line-height: 29px;
+}
+#right .loginbox .content .check a{
+	line-height: 29px;
+	float:right;
+	color:#e31939;
+}
+#right .loginbox .content .now{
+	display:block;
+	text-align: center;
+	line-height: 30px;
+	color:#fff;
+	background: #e31939;
+	margin-top:10px;
+}
+#right .online{
+	width:35px;
+	height:40px;
+	line-height:16px;
+	position:absolute;
+	top:186px;
+}
+#right .online .redbox{
+	width:35px;
+	text-align: center;
+	padding:4px 0;
+	color:#fff;
+	background: #c40000;
+	cursor:pointer;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#right .survey{
+	width:35px;
+	height:40px;
+	position:absolute;
+	top:249px;
+	overflow: hidden;
+}
+#right .survey .img{
+	padding-top:25px;
+	height:15px;
+	font:11px/15px "";
+	color:#fff;
+	text-align: center;
+	background: url(../img/site_bar.png) no-repeat 1px -5px;
+	cursor: pointer;
+}
+#right .survey .des{
+	width:35px;
+	line-height:16px;
+	text-align: center;
+	padding:4px 0;
+	color:#fff;
+	background: #c40000;
+	cursor:pointer;
+}
+#right .shop{
+	position:absolute;
+	top:316px;
+	cursor:pointer;
+}
+#right .shop:hover{
+	background: #c40000;
+}
+#right .shop i{
+	display:block;
+	width:35px;
+	height:35px;
+	background: url(../img/site_bar.png) no-repeat 0px -40px;
+}
+#right .shop .des{
+	width:13px;
+	padding:0 11px;
+	font:12px/28px "";
+	color:#fff;
+	text-align: center;
+}
 
 
 
