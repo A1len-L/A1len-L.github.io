@@ -111,8 +111,14 @@
 	background: url(../img/register.png) -1px 0;
 	margin-left: -21px;
 }
+#main .wrap .loginbox .content .item:nth-child(1) .itemE{
+	display:none;
+}
 #main .wrap .loginbox .content .item:nth-child(1) .top i{
 	background-position-y: -50px;
+}
+#main .wrap .loginbox .content .item:nth-child(1) .itemE .top i{
+	background-position-y: 0px;
 }
 #main .wrap .loginbox .content .item:nth-child(2) .top i{
 	background-position-y: -25px;

@@ -25,6 +25,24 @@ $(function(){
 		$(this).parent().next().css({color:"green"}).html("-手机号码可以使用。");
 		flag1=true;
 	});
+	//email(失焦验证)
+		var emailReg=/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/;
+	
+	$("#main .wrap .loginbox .content .item .top .email").blur(function(){
+		var emailV=$(this).val();
+		if(emailV.length==0){
+			$(this).parent().next().html("-email号码不能为空。").css({color:"#666"});
+			flag1=false;
+			return;
+		}
+		if( !emailReg.test(emailV) ){
+			$(this).parent().next().html("-email号码不合法。").css({color:"#666"});
+			flag1=false;
+			return;
+		}
+		$(this).parent().next().css({color:"green"}).html("-email号码可以使用。");
+		flag1=true;
+	});
 	
 	//密码 ：不得少于6位数  纯数字为弱 有字母为中 有特殊字符为强
 	//失焦
@@ -32,7 +50,7 @@ $(function(){
 		var pswV=$(this).val();
 		var sureV=$("#main .wrap .loginbox .content .item .top .sure").val();
 		if(pswV.length<6){
-			$(this).parent().next().show().next().hide();
+			$(this).parent().next().show().html("- 登录密码不能少于 6 个字符。").next().hide();
 			flag2=false;
 			return;
 		}else{
@@ -93,7 +111,7 @@ $(function(){
 			return;
 		}
 		if(sureV==pswV){
-			$(this).parent().next().html("*可以注册。").css({color:"green"});
+			$(this).parent().next().html("*两次密码输入一致。").css({color:"green"});
 			flag3=true;
 		}else{
 			$(this).parent().next().html("-两次密码输入不一致。").css({color:"#666"});
@@ -101,61 +119,42 @@ $(function(){
 		}
 	});
 	//点击【立即注册】
-	$("#main .wrap .loginbox .content .login").click(function(){
+	$("#main .wrap .loginbox .content .login").click(function(){		
 		if(flag1&&flag2&&flag3){
-			alert("注册成功！")
+			if(!$(".accept").prop("checked")){
+				$(".accept").next().fadeOut(60).fadeIn(60).fadeOut(50).fadeIn(50);
+				return;
+			}
+			alert("注册成功！");
+		}else{
+			alert("所需信息不完整！");
 		}
 	})
 	
 	/*切换注册*/
+	var errors=$("#main .wrap .loginbox .content .item .error");
 	$("#main .wrap .loginbox .title ul li").click(function(){
+		//点击后将所有开关关闭
+		flag1=false;
+		flag2=false;
+		flag3=false;
+		//点击后清空所有错误区信息
+		errors.each(function(){
+			$(this).html("");
+		})
+		//点击后清空所有input的值
+		$("#main .wrap .loginbox .content .item .top input").each(function(){
+			$(this).val("");
+		})
+		var email=$("#main .wrap .loginbox .content .itemE");
 		$(this).addClass("click").siblings().removeClass("click");
-		var input=$("#main .wrap .loginbox .content .item:nth-child(1) .top input");
-		var i1=$("#main .wrap .loginbox .content .item:nth-child(1) i");
 		if($(this).index()==1){			
-			i1.css({
-				["background-position-y"]:0
-			})
-			input.attr("placeholder","email");
-			input.attr("class","l email");
-			
+			email.show().siblings().hide();			
 		}else{
-			i1.css({
-				["background-position-y"]:-50
-			})
-			input.attr("placeholder","手机");
-			input.attr("class","l phone");
-		}
+			email.hide().siblings().show();
+		};
 	})
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

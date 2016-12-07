@@ -177,7 +177,8 @@ $(function(){
 					}
 				//重新写到cookie
 				$.cookie("iphone",JSON.stringify(cookie),{expires:365,path: '/'})
-				console.log($.cookie("iphone"))
+				console.log($.cookie("iphone"));
+				alert("添加成功！")
 			})
 		}
 	}

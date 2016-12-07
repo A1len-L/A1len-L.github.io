@@ -365,6 +365,7 @@
 	background: #fff;
 	position: relative;
 	z-index: 10;
+	top:1px;
 }
 #recommend .content{
 	width:1108px;

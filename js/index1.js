@@ -1,4 +1,10 @@
 $(function(){
+	/*模态框*/
+	$(".modal").stop(true).animate({
+		height:0
+	},2000,function(){
+		$(this).hide();
+	})
 	/*点击宝贝、店铺*/
 	$("#head .sesrch .search-top span").click(function(){
 		$(this).addClass("bg").siblings().removeClass("bg")
@@ -21,15 +27,6 @@ $(function(){
 			t=t-32+39
 		}
 		$("#nav .allgoods .goodscontent").css("top",t);
-		
-		/*//移入不消失
-		$("#nav .allgoods .goodscontent").mouseenter(function(){
-			$(this).show();
-		})
-		//移出消失
-		$("#nav .allgoods .goodscontent").mouseleave(function(){
-			$(this).hide();
-		})*/
 	})	
 	//鼠标移出ul还原
 	$("#nav .allgoods").mouseleave(function(){
@@ -374,6 +371,9 @@ $(function(){
 	var screenH=$(window).height();
 	var flag=false; //false <    true >= 
 	var index=null;
+	
+	var back=$("#right .back");//回到顶部按钮
+	var flagB=false;//false为小于710 true为大于710
 	/*滚轮事件*/
 	$(window).scroll(function(){
 		var windowT=$(this).scrollTop();		
@@ -388,6 +388,23 @@ $(function(){
 					return false;
 				}
 		});
+		//回到顶部按钮显示与隐藏
+		if(windowT>710){
+			if(!flagB){
+				flagB=true;
+				back.stop(true).animate({
+					bottom:0
+				})
+			}		
+		}else{
+			if(flagB){
+				flagB=false;
+				back.stop(true).animate({
+					bottom:-40
+				})
+			}
+		};
+		
 		//楼层ul显示与隐藏
 		if( windowT>(floorT-30) ){
 			if(flag){
@@ -466,6 +483,13 @@ $(function(){
 		$(this).find(".up").stop(true).animate({
 			marginTop:0
 		},200)
+	})
+	//点击回到顶部
+	var backbtn=$("#right .back .des");
+	backbtn.click(function(){
+		$("html,body").animate({
+			scrollTop:0
+		},500)
 	})
 })
 
