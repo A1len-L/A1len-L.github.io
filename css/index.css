@@ -15,6 +15,13 @@
 	vertical-align: middle;
 	position:relative;
 }
+#top .top-l .local-icon{
+	display:inline-block;
+	height:32px;
+	vertical-align: middle;
+	width:10px;
+	background: url(../img/curcity.png) no-repeat -6px 3px ;
+}
 #top .top-l .where:hover .local-list{
 	display:block;
 }
@@ -136,21 +143,37 @@
 	line-height: 32px;
 	color:red;
 	cursor:pointer;
-	margin-right:5px;
+	padding-left: 15px;
+	background: url(../img/user_header.png) no-repeat -292px -25px;
+}
+#top .top-r .dianpu:nth-child(2){
+	margin-right: 5px;
+}
+#top .top-r .dianpu:nth-child(3){
+	background-position:-295px -4px;
+	padding-right: 3px;
+}
+#top .top-r .dianpu:nth-child(7){
+	background:none;
+	padding-left:0px;
 }
 #top .top-r .dianpu:hover{
 	text-decoration: underline;
 }
+#top .top-r .line{
+	margin-right: 7px;
+}
 #top .top-r .phone{
 	display: inline-block;
-	width:45px;
+	width:55px;
 	height:32px;
 	text-align: center;
 	position:relative;	
 	cursor: pointer;
+	
 }
 #top .top-r .phone:hover{
-	width:43px;
+	width:53px;
 	background: #fff;
 	height:33px;
 	border-left:1px solid #ccc;
@@ -163,6 +186,8 @@
 }
 #top .top-r .phone .mobile{
 	line-height: 32px;
+	padding-left: 15px;
+	background: url(../img/user_header.png) no-repeat -362px -4px;
 }
 #top .top-r .phone .app{
 	position:absolute;
@@ -202,6 +227,8 @@
 }
 #top .top-r .nav .nav-title{
 	line-height: 32px;
+	padding-left: 16px;
+	background: url(../img/user_header.png) no-repeat -293px -42px;
 }
 #top .top-r .nav .nav-content{
 	width:1208px;
@@ -596,7 +623,7 @@
 	border-right: 1px solid #ccc;
 	border-left: 1px solid #ccc;
 	position:absolute;
-	right:101px;
+	right:102px;
 	bottom:0;
 }
 #banner .banright .order{
